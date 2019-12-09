@@ -84,7 +84,7 @@ stages:
     variables:
     - group: 'Deployment Credentials'
     - name: ResourceGroupName
-      value: 'RG_LetsEncrypt'
+      value: 'MoultonSchool_LetsEncrypt'
 
     steps:
     - task: DownloadPipelineArtifact@1
@@ -121,7 +121,7 @@ stages:
     variables:
     - group: 'Deployment Credentials'
     - name: ResourceGroupName
-      value: 'RG_LetsEncrypt_Int'
+      value: 'MoultonSchool_LetsEncrypt_Int'
 
     steps:
     - task: DownloadPipelineArtifact@1
