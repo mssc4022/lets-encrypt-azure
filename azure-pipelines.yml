@@ -108,7 +108,7 @@ stages:
     - task: AzureFunctionApp@1
       displayName: 'Deploy Azure Function App'
       inputs:
-        azureSubscription: 'MSSC_Azure'
+        azureSubscription: 'Devops_App'
         appType: functionApp
         appName: '$(ResourceGroupName)'
         package: '$(System.ArtifactsDirectory)/LetsEncrypt.Func'
@@ -132,7 +132,7 @@ stages:
     - task: AzurePowerShell@4
       displayName: 'Deploy'
       inputs:
-        azureSubscription: 'MSSC_Azure'
+        azureSubscription: 'Devops_App'
         ScriptPath: '$(System.ArtifactsDirectory)/Deploy.ps1'
         ScriptArguments: '-ResourceGroupName $(ResourceGroupName) -File integration.json'
         azurePowerShellVersion: LatestVersion
